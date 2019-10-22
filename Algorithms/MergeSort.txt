@@ -20,4 +20,6 @@
 '''
 Run time analysis: recursion tree results in max depth of log2(n+1) where n is power of 2
 At each recursion tree j = 0, 1, 2, 3... log2(n) there are 2^j sub problems of size n/(2^j) since each number of comparisons being done at each level doubles and size of arrys half
+
+upper bound 6n(log2(n) +1) = 6nlog2(n) +6n
 '''

@@ -4,6 +4,8 @@
 # B = 2nd sorted array [n/2]
 # i = 1
 # j = 1
+#end cases to implement: keep tracck of when you fall off A or B
+
  
 '''For k=1 to n
 	if A(i) < B(j):
@@ -15,4 +17,7 @@
    end
 '''
 
-#end cases, keep tracck of when you fall off A or B
+'''
+Run time analysis: recursion tree results in max depth of log2(n+1) where n is power of 2
+At each recursion tree j = 0, 1, 2, 3... log2(n) there are 2^j sub problems of size n/(2^j) since each number of comparisons being done at each level doubles and size of arrys half
+'''

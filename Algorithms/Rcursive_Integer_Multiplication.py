@@ -15,7 +15,7 @@ class product_calculator():
     2) Recursive integer multiplication
     3) gradeschool math implementation
     '''
-    def karatsuba(x, y):
+    def karatsuba(x, y=None):
         '''
         1) convert A and B to strings
         2) check string length
@@ -23,19 +23,30 @@ class product_calculator():
         4) if string length >1
         5) call function again on smaller pairs
         '''
-        #Assume lendth of
+        #Assume length of x and y are the same
         lenx = len(str(x))
         leny = len(str(y))
         try:
             y = (lenx == leny)
         except y is False:
             print("x and y are not the same length")
-        return None
+
+        if lenx == 1:
+            #if the length of strings are 1, then we are done
+            return xy
+        else:
+            (Acomp, Bcomp, Ccomp) = ksplit(x,y)
+            A = karatsuba(Acomp)
+            B = karatsuba(Bcomp)
+            C = karatsuba(Ccomp)
+            product = ((10**lenx)*A) + ((10**(lenx/2))*B) + C
+        return product
 
     def ksplit():
         A = None
         B = None
         C = None
+        #Ksplit should use karatsuba
         return (A,B,C)
 
     def recursive_integer_multiplication(a,b):

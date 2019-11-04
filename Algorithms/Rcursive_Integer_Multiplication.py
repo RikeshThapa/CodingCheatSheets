@@ -42,7 +42,10 @@ class product_calculator():
             product = ((10**lenx)*A) + ((10**(lenx/2))*B) + C
         return product
 
-    def ksplit():
+    def ksplit(x,y):
+        strignx = str(x)
+        
+
         A = None
         B = None
         C = None

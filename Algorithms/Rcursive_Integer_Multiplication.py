@@ -44,8 +44,13 @@ class product_calculator():
 
     def ksplit(x,y):
         strignx = str(x)
-        
-
+        lenx = len(stringx)
+        stringy = str(y)
+        leny = len(stringy)
+        constituent0 = stringx[0:(lenx/2)]
+        constituent1 = stringx[(lenx/2)+1:lenx]
+        constituent2 = stringy[0:(leny/2)]
+        constituent3 = stringy[(leny/2)+1:leny]
         A = None
         B = None
         C = None
